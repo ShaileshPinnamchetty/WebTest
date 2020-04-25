@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="116313" started-at="2020-04-25T12:25:57Z" finished-at="2020-04-25T12:27:53Z">
+    <groups>
+    </groups>
+    <test name="LoginTest" duration-ms="39929" started-at="2020-04-25T12:25:57Z" finished-at="2020-04-25T12:26:37Z">
+      <class name="Test.LoginPage">
+        <test-method status="PASS" signature="bfrtst()[pri:0, instance:Test.LoginPage@59ec2012]" name="bfrtst" is-config="true" duration-ms="2" started-at="2020-04-25T17:55:57Z" finished-at="2020-04-25T17:55:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bfrtst -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:Test.LoginPage@59ec2012]" name="initialize" is-config="true" duration-ms="14353" started-at="2020-04-25T17:55:57Z" finished-at="2020-04-25T17:56:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="bfrcls()[pri:0, instance:Test.LoginPage@59ec2012]" name="bfrcls" is-config="true" duration-ms="0" started-at="2020-04-25T17:56:11Z" finished-at="2020-04-25T17:56:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bfrcls -->
+        <test-method status="PASS" signature="bfrmtd()[pri:0, instance:Test.LoginPage@59ec2012]" name="bfrmtd" is-config="true" duration-ms="1" started-at="2020-04-25T17:56:12Z" finished-at="2020-04-25T17:56:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bfrmtd -->
+        <test-method status="PASS" signature="loginTest(java.lang.Integer)[pri:0, instance:Test.LoginPage@59ec2012]" name="loginTest" duration-ms="4855" started-at="2020-04-25T17:56:12Z" data-provider="data" finished-at="2020-04-25T17:56:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1112223336]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="bfrmtd()[pri:0, instance:Test.LoginPage@59ec2012]" name="bfrmtd" is-config="true" duration-ms="1" started-at="2020-04-25T17:56:16Z" finished-at="2020-04-25T17:56:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bfrmtd -->
+        <test-method status="PASS" signature="loginTest(java.lang.Integer)[pri:0, instance:Test.LoginPage@59ec2012]" name="loginTest" duration-ms="3745" started-at="2020-04-25T17:56:16Z" data-provider="data" finished-at="2020-04-25T17:56:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1112224333]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="bfrmtd()[pri:0, instance:Test.LoginPage@59ec2012]" name="bfrmtd" is-config="true" duration-ms="0" started-at="2020-04-25T17:56:20Z" finished-at="2020-04-25T17:56:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bfrmtd -->
+        <test-method status="PASS" signature="loginTest(java.lang.Integer)[pri:0, instance:Test.LoginPage@59ec2012]" name="loginTest" duration-ms="3986" started-at="2020-04-25T17:56:20Z" data-provider="data" finished-at="2020-04-25T17:56:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1112221433]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test.LoginPage@59ec2012]" name="tearDown" is-config="true" duration-ms="12916" started-at="2020-04-25T17:56:24Z" finished-at="2020-04-25T17:56:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Test.LoginPage -->
+    </test> <!-- LoginTest -->
+    <test name="HomePageTest" duration-ms="25962" started-at="2020-04-25T12:26:37Z" finished-at="2020-04-25T12:27:03Z">
+      <class name="Test.HomePage">
+        <test-method status="PASS" signature="bfrtst()[pri:0, instance:Test.HomePage@69ea3742]" name="bfrtst" is-config="true" duration-ms="1" started-at="2020-04-25T17:56:37Z" finished-at="2020-04-25T17:56:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bfrtst -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:Test.HomePage@69ea3742]" name="initialize" is-config="true" duration-ms="12238" started-at="2020-04-25T17:56:37Z" finished-at="2020-04-25T17:56:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="bfrcls()[pri:0, instance:Test.HomePage@69ea3742]" name="bfrcls" is-config="true" duration-ms="1" started-at="2020-04-25T17:56:49Z" finished-at="2020-04-25T17:56:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bfrcls -->
+        <test-method status="PASS" signature="radioBtnTest()[pri:0, instance:Test.HomePage@69ea3742]" name="radioBtnTest" duration-ms="1967" started-at="2020-04-25T17:56:49Z" finished-at="2020-04-25T17:56:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- radioBtnTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test.HomePage@69ea3742]" name="tearDown" is-config="true" duration-ms="11750" started-at="2020-04-25T17:56:51Z" finished-at="2020-04-25T17:57:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Test.HomePage -->
+    </test> <!-- HomePageTest -->
+    <test name="HomePageSanityTest" duration-ms="50294" started-at="2020-04-25T12:27:03Z" finished-at="2020-04-25T12:27:53Z">
+      <class name="Test.HomePage">
+        <test-method status="PASS" signature="bfrsut()[pri:0, instance:Test.HomePage@69ea3742]" name="bfrsut" is-config="true" duration-ms="9" started-at="2020-04-25T17:55:57Z" finished-at="2020-04-25T17:55:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bfrsut -->
+      </class> <!-- Test.HomePage -->
+      <class name="Test.HomePageSanity">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:Test.HomePageSanity@2d928643]" name="initialize" is-config="true" duration-ms="18539" started-at="2020-04-25T17:57:03Z" finished-at="2020-04-25T17:57:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="sanityTest()[pri:0, instance:Test.HomePageSanity@2d928643]" name="sanityTest" duration-ms="17944" started-at="2020-04-25T17:57:22Z" finished-at="2020-04-25T17:57:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sanityTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test.HomePageSanity@2d928643]" name="tearDown" is-config="true" duration-ms="13805" started-at="2020-04-25T17:57:40Z" finished-at="2020-04-25T17:57:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Test.HomePageSanity -->
+    </test> <!-- HomePageSanityTest -->
+  </suite> <!-- Suite -->
+</testng-results>
