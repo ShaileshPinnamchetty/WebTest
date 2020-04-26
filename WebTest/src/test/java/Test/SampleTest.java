@@ -13,4 +13,9 @@ public class SampleTest {
 		System.out.println("Thhis is sample test1");
 	}
 
+	@Test
+	public void test2(){
+		System.out.println("Thhis is sample test2");
+	}
+
 }
