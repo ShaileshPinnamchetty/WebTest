@@ -38,7 +38,8 @@ public class HomePageSanity {
 		XSSFSheet sh=wb.getSheetAt(0);
 		String fromCity=sh.getRow(1).getCell(0).getStringCellValue();
 		String toCity1=sh.getRow(1).getCell(1).getStringCellValue();
-		String toCity2=sh.getRow(1).getCell(2).getStringCellValue();		
+		String toCity2=sh.getRow(1).getCell(2).getStringCellValue();	
+		Assert.assertEquals(1, 2);
 		hp.getmultiCityRadioBtn().click();
 		hp.getfromList().click();
 		driver.switchTo().activeElement().sendKeys(fromCity);
