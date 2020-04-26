@@ -7,5 +7,10 @@ public class SampleTest {
 	public void test(){
 		System.out.println("Thhis is sample test");
 	}
+	
+	@Test
+	public void test1(){
+		System.out.println("Thhis is sample test1");
+	}
 
 }
