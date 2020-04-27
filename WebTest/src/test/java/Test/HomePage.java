@@ -49,7 +49,7 @@ public class HomePage {
 		hp.getReturnLabel().click();
 		for (int i=0;i<li.size();i++){
 			if (li.get(i).getAttribute("Class").matches("selected"))
-			Assert.assertEquals(li.get(i).getText(), "ROUND TRIP1");
+			Assert.assertEquals(li.get(i).getText(), "ROUND TRIP11");
 		}		
 	}
 

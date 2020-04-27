@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -25,8 +26,10 @@ public class Base {
 	public WebDriver InitBrowser() {
 		prop=new Properties();
 		try {
-		fis=new FileInputStream("C:\\Users\\Dinesh\\workspace\\WebTest\\src\\test\\resources\\prop.properties");
-		prop.load(fis);
+		//fis=new FileInputStream("C:\\Users\\Dinesh\\workspace\\WebTest\\src\\test\\resources\\prop.properties");
+		String propFileName = "prop.properties";
+		InputStream inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
+		prop.load(inputStream);
 		String browser=prop.getProperty("browser");
 		if (browser.equals("chrome")){
 			System.setProperty("webdriver.chrome.driver", "D:\\selenium-java-3.141.59\\chromedriver_win32\\chromedriver.exe");
@@ -56,10 +59,11 @@ public class Base {
 	}
 	
 	public void getScreenshot(String classname, String testname) throws IOException{
-		new File(System.getProperty("user.dir")+"\\"+classname).mkdir();
+		//new File(System.getProperty("user.dir")+"\\"+classname).mkdir();
+		new File("C:\\Users\\Dinesh\\workspace\\WebTest\\"+classname).mkdir();
 		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileHandler.copy(src, new File(System.getProperty("user.dir")+"\\"+classname+"\\"+testname+".jpg"));
-		System.out.println("Screenshot captured");
+		FileHandler.copy(src, new File("C:\\Users\\Dinesh\\workspace\\WebTest\\"+classname+"\\"+testname+".jpg"));
+		System.out.println("Screenshot captured at: "+"C:\\Users\\Dinesh\\workspace\\WebTest\\"+classname+"\\"+testname+".jpg");
 		
 	}
 

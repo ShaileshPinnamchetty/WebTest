@@ -101,6 +101,7 @@ public class JiraBase {
 	public void uploadAttachment(){
 		System.out.println("----------Upload attachment started");
 		System.out.println("Using"+pr.getProperty("res_issue")+"/"+issue_id+"/attachments");
+		System.out.println("Using screenshot: "+pr.getProperty("attachment")+"\\"+testClassName+"\\"+testName+".jpg");
 		File f=new File(pr.getProperty("attachment")+"\\"+testClassName+"\\"+testName+".jpg");
 		RestAssured.baseURI=pr.getProperty("BaseURL");
 		Response res=given().multiPart(f).header("X-Atlassian-Token","nocheck").header("Content-Type","multipart/form-data").

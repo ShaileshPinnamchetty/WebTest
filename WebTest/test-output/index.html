@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>C:\Users\Dinesh\workspace\WebTest\testng.xml</span>
+                    <span>C:\Users\Dinesh\Github\WebTest\WebTest\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">5 methods, 2 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Test.HomePage" hash-for-method="radioBtnTest">radioBtnTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Test.HomePageSanity" hash-for-method="sanityTest">sanityTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -115,16 +134,6 @@
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Test.LoginPage" hash-for-method="loginTest(1112221433)">loginTest(1112221433)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Test.HomePage" hash-for-method="radioBtnTest">radioBtnTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Test.HomePageSanity" hash-for-method="sanityTest">sanityTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
@@ -137,9 +146,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">Test.HomePageSanity</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -148,10 +157,33 @@
                   <a name="sanityTest">
                   </a> <!-- sanityTest -->
                   <span class="method-name">sanityTest</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [2] but found [1]
+	at Test.HomePageSanity.sanityTest(HomePageSanity.java:43)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">Test.HomePage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="radioBtnTest">
+                  </a> <!-- radioBtnTest -->
+                  <span class="method-name">radioBtnTest</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [ROUND TRIP11] but found [ROUND TRIP]
+	at Test.HomePage.radioBtnTest(HomePage.java:52)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -184,25 +216,10 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">Test.HomePage</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="radioBtnTest">
-                  </a> <!-- radioBtnTest -->
-                  <span class="method-name">radioBtnTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Dinesh\workspace\WebTest\testng.xml</span>
+            <span class="header-content">C:\Users\Dinesh\Github\WebTest\WebTest\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -272,30 +289,30 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'sanityTest')
-data.setCell(0, 2, 'Test.HomePageSanity')
-data.setCell(0, 3, 17944);
+data.setCell(0, 1, 'loginTest')
+data.setCell(0, 2, 'Test.LoginPage')
+data.setCell(0, 3, 3846);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'loginTest')
 data.setCell(1, 2, 'Test.LoginPage')
-data.setCell(1, 3, 4855);
+data.setCell(1, 3, 2599);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'loginTest')
 data.setCell(2, 2, 'Test.LoginPage')
-data.setCell(2, 3, 3986);
+data.setCell(2, 3, 2460);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'loginTest')
-data.setCell(3, 2, 'Test.LoginPage')
-data.setCell(3, 3, 3745);
+data.setCell(3, 1, 'radioBtnTest')
+data.setCell(3, 2, 'Test.HomePage')
+data.setCell(3, 3, 1925);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'radioBtnTest')
-data.setCell(4, 2, 'Test.HomePage')
-data.setCell(4, 3, 1967);
+data.setCell(4, 1, 'sanityTest')
+data.setCell(4, 2, 'Test.HomePageSanity')
+data.setCell(4, 3, 43);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 32 seconds</span>
+              <span class="suite-total-time">Total running time: 10 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -331,81 +348,85 @@ return data;
               <div class="chronological-class-name">Test.LoginPage</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">bfrtst</span>
-                <span class="method-start">19 ms</span>
+                <span class="method-start">29 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-test before">
                 <span class="method-name">initialize</span>
-                <span class="method-start">21 ms</span>
+                <span class="method-start">30 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">bfrcls</span>
-                <span class="method-start">14382 ms</span>
+                <span class="method-start">10100 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">bfrmtd</span>
-                <span class="method-start">14437 ms</span>
+                <span class="method-start">10121 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginTest(1112223336)</span>
-                <span class="method-start">14438 ms</span>
+                <span class="method-start">10121 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">bfrmtd</span>
-                <span class="method-start">19294 ms</span>
+                <span class="method-start">13968 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginTest(1112224333)</span>
-                <span class="method-start">19295 ms</span>
+                <span class="method-start">13969 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">bfrmtd</span>
-                <span class="method-start">23040 ms</span>
+                <span class="method-start">16431 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginTest(1112221433)</span>
-                <span class="method-start">23040 ms</span>
+                <span class="method-start">16431 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">27029 ms</span>
+                <span class="method-start">19033 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.HomePage</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">bfrtst</span>
-                <span class="method-start">40070 ms</span>
+                <span class="method-start">23216 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-test before">
                 <span class="method-name">initialize</span>
-                <span class="method-start">40071 ms</span>
+                <span class="method-start">23217 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">bfrcls</span>
-                <span class="method-start">52309 ms</span>
+                <span class="method-start">31184 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">radioBtnTest</span>
-                <span class="method-start">52311 ms</span>
+                <span class="method-start">31185 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">54280 ms</span>
+                <span class="method-start">39761 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.HomePageSanity</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">initialize</span>
-                <span class="method-start">66036 ms</span>
+                <span class="method-start">44789 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">sanityTest</span>
-                <span class="method-start">84575 ms</span>
+                <span class="method-start">54775 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">102524 ms</span>
+                <span class="method-start">56873 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
