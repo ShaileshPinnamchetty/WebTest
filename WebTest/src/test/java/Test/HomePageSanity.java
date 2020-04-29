@@ -50,7 +50,7 @@ public class HomePageSanity {
 		hp.getfirstListItem().click();
 		List<WebElement> cal=hp.getCalndar();
 		for (int i=0;i<cal.size();i++){
-			if (cal.get(i).getText().equals(Integer.toString(today+1))){		
+			if (cal.get(i).getText().equals(Integer.toString(today))){		
 				cal.get(i).click();
 				break;
 			}
@@ -61,7 +61,7 @@ public class HomePageSanity {
 		Thread.sleep(2000);
 		hp.getfirstListItem().click();
 		for (int i=0;i<cal.size();i++){
-			if (cal.get(i).getText().equals(Integer.toString(today+2))){
+			if (cal.get(i).getText().equals("10")){
 				cal.get(i).click();
 				break;
 			}
