@@ -6,6 +6,7 @@
       <class name="Test.HomePageSanity">
         <methods>
           <include name="sanityTest"/>
+          <include name="tearDown"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- Test.HomePageSanity -->

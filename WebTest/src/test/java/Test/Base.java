@@ -32,7 +32,7 @@ public class Base {
 		prop.load(inputStream);
 		String browser=prop.getProperty("browser");
 		if (browser.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver", "D:\\selenium-java-3.141.59\\chromedriver_win32\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "D:\\selenium-java-3.141.59\\chromedriver_win32 for version 84\\chromedriver.exe");
 			driver=new ChromeDriver();
 		}
 		if (browser.equals("firefox")){
