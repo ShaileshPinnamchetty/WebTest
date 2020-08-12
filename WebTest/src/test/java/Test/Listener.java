@@ -30,12 +30,12 @@ public class Listener implements ITestListener{
 			e.printStackTrace();
 		}
 		JiraBase jb=new JiraBase(result.getInstanceName(),result.getName());
-		try {
+		/*try {
 			jb.sessionKey();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 	}
 
 	public void onTestSkipped(ITestResult result) {

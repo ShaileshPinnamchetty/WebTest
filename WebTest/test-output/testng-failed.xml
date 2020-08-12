@@ -1,7 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="Test.Listener"/>
+    <listener class-name="Test.ExtentListener"/>
+  </listeners>
+  <test name="LoginTest(failed)">
+    <classes>
+      <class name="Test.HomePageSanity">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- Test.HomePageSanity -->
+      <class name="Test.HomePage">
+        <methods>
+          <include name="initialize"/>
+          <include name="bfrtst"/>
+          <include name="bfrsut"/>
+          <include name="tearDown"/>
+          <include name="bfrcls"/>
+        </methods>
+      </class> <!-- Test.HomePage -->
+      <class name="Test.LoginPage">
+        <methods>
+          <include name="bfrcls"/>
+          <include name="loginTest" invocation-numbers="1"/>
+          <include name="bfrmtd"/>
+          <include name="initialize"/>
+          <include name="tearDown"/>
+          <include name="bfrtst"/>
+        </methods>
+      </class> <!-- Test.LoginPage -->
+    </classes>
+  </test> <!-- LoginTest(failed) -->
+  <test name="HomePageTest(failed)">
+    <classes>
+      <class name="Test.HomePageSanity">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- Test.HomePageSanity -->
+      <class name="Test.HomePage">
+        <methods>
+          <include name="radioBtnTest"/>
+          <include name="initialize"/>
+          <include name="bfrtst"/>
+          <include name="bfrsut"/>
+          <include name="tearDown"/>
+          <include name="bfrcls"/>
+        </methods>
+      </class> <!-- Test.HomePage -->
+      <class name="Test.LoginPage">
+        <methods>
+          <include name="bfrcls"/>
+          <include name="bfrmtd"/>
+          <include name="initialize"/>
+          <include name="tearDown"/>
+          <include name="bfrtst"/>
+        </methods>
+      </class> <!-- Test.LoginPage -->
+    </classes>
+  </test> <!-- HomePageTest(failed) -->
+  <test name="HomePageSanityTest(failed)">
     <classes>
       <class name="Test.HomePageSanity">
         <methods>
@@ -10,6 +72,24 @@
           <include name="initialize"/>
         </methods>
       </class> <!-- Test.HomePageSanity -->
+      <class name="Test.HomePage">
+        <methods>
+          <include name="initialize"/>
+          <include name="bfrtst"/>
+          <include name="bfrsut"/>
+          <include name="tearDown"/>
+          <include name="bfrcls"/>
+        </methods>
+      </class> <!-- Test.HomePage -->
+      <class name="Test.LoginPage">
+        <methods>
+          <include name="bfrcls"/>
+          <include name="bfrmtd"/>
+          <include name="initialize"/>
+          <include name="tearDown"/>
+          <include name="bfrtst"/>
+        </methods>
+      </class> <!-- Test.LoginPage -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- HomePageSanityTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
