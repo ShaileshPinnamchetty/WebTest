@@ -41,6 +41,9 @@ public class HomePageObjects {
 	
 	@FindBy(xpath="//div[@class='DayPicker-Month'][1]/div[3]//descendant::p")
 	List<WebElement> calndar;
+	
+	@FindBy(xpath="//div[@data-cy='outsideModal']")
+	WebElement outsideModal;	
 		
 	public List<WebElement> getTicketOptions(){
 		return ticketOptions;
@@ -76,5 +79,9 @@ public class HomePageObjects {
 
 	public List<WebElement> getCalndar(){
 		return calndar;
+	}
+	
+	public WebElement getoutsideModal(){
+		return outsideModal;
 	}
 }

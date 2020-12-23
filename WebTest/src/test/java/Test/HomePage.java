@@ -3,6 +3,7 @@ package Test;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -41,6 +42,12 @@ public class HomePage {
 	
 	@Test
 	public void radioBtnTest(){
+		try{
+			hp.getoutsideModal().click();
+		}
+		catch (NoSuchElementException nse){
+			System.out.println("Login popup is not displayed. Continuing execution!");
+		}
 		List<WebElement> li=hp.getTicketOptions();
 		for (int i=0;i<li.size();i++){
 			if (li.get(i).getAttribute("Class").matches("selected"))

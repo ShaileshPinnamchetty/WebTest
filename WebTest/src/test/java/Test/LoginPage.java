@@ -3,9 +3,12 @@ package Test;
 import java.io.IOException;
 //import Test.Base;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
@@ -43,7 +46,16 @@ public class LoginPage {
 	@Test(dataProvider="data")
 	public void loginTest(Integer mobNum) throws IOException{
 	driver.navigate().refresh();
-	lp.getLoginBtn().click();
+	try {
+		lp.getLoginWithPhoneEmail().click();
+	}
+	catch (NoSuchElementException nse){
+		System.out.println("Login popup is not displayed. Clicking on login button!");
+		WebDriverWait wait = new WebDriverWait(driver,30); 
+		wait.until(ExpectedConditions.visibilityOf(lp.getLoginBtn()));
+		lp.getLoginBtn().click();
+	}
+	//lp.getEmailTxtBox().clear();
 	lp.getEmailTxtBox().sendKeys(mobNum.toString());
 	Actions a =new Actions(driver);
 	a.doubleClick(lp.getSubmitBtn()).build().perform();
@@ -53,8 +65,8 @@ public class LoginPage {
 	@DataProvider
 	public Object[] data(){
 		Object[] ob=new Object[3];
-		ob[0]=1112223336;
-		ob[1]=1112224333;
+		ob[0]=1112223331;
+		ob[1]=1112224332;
 		ob[2]=1112221433;
 		return ob;
 	}

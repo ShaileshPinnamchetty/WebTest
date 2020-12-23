@@ -10,6 +10,7 @@ import java.util.List;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -35,6 +36,12 @@ public class HomePageSanity {
 	
 	@Test(enabled=true)
 	public void sanityTest() throws InterruptedException, IOException{	
+		try{
+			hp.getoutsideModal().click();
+		}
+		catch (NoSuchElementException nse){
+			System.out.println("Login popup is not displayed. Continuing execution!");
+		}
 		int today = LocalDate.now().getDayOfMonth();
 		XSSFSheet sh=wb.getSheetAt(0);
 		String fromCity=sh.getRow(1).getCell(0).getStringCellValue();

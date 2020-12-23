@@ -14,10 +14,10 @@
     <classes>
       <class name="Test.HomePage"/>
     </classes>
-  </test> 
+  </test>  
   <test name="HomePageSanityTest">
     <classes>
       <class name="Test.HomePageSanity"/>
     </classes>
-  </test> <!-- Test -->
+  </test>  <!-- Test -->
 </suite> <!-- Suite -->
