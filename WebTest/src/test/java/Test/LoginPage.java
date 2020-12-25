@@ -21,29 +21,29 @@ public class LoginPage {
 	WebDriver driver;
 	Base base=new Base();
 	LogInPageObjects lp;
-	@BeforeTest
+	@BeforeTest(enabled=true, groups="Sanity")
 	public void initialize(){
 		driver=base.InitBrowser();
 		driver.get(base.prop.getProperty("url"));
 		lp=new LogInPageObjects(driver);
 	}
 	
-	@BeforeMethod
+	@BeforeMethod(enabled=true, groups="Sanity")
 	public void bfrmtd(){
 		System.out.println("before method in loginpage");
 	}
 	
-	@BeforeClass
+	@BeforeClass(enabled=true, groups="Sanity")
 	public void bfrcls(){
 		System.out.println("before class in login pages");
 	}
 	
-	@BeforeTest
+	@BeforeTest(enabled=true, groups="Sanity")
 	public void bfrtst(){
 		System.out.println("before test in login page");
 	}
 	
-	@Test(dataProvider="data")
+	@Test(dataProvider="data", enabled=true, groups="Sanity")
 	public void loginTest(Integer mobNum) throws IOException{
 	driver.navigate().refresh();
 	try {
@@ -71,7 +71,7 @@ public class LoginPage {
 		return ob;
 	}
 	
-	@AfterTest()
+	@AfterTest(enabled=true, groups="Sanity")
 	public void tearDown(){
 		base.tearDown(driver);
 	}	

@@ -11,6 +11,12 @@
     </classes>
   </test>
   <test name="HomePageTest">
+   <groups>		
+   <run>		
+    <include name="Sanity" />		
+    <exclude name="Smoke" />
+   </run>		
+  </groups>	  
     <classes>
       <class name="Test.HomePage"/>
     </classes>

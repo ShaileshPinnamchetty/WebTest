@@ -19,28 +19,28 @@ public class HomePage {
 	WebDriver driver;
 	Base base=new Base();
 	HomePageObjects hp;
-	@BeforeTest
+	@BeforeTest(groups="Sanity")
 	public void initialize(){
 		driver=base.InitBrowser();
 		driver.get(base.prop.getProperty("url"));
 		hp=new HomePageObjects(driver);
 	}
-	@BeforeSuite
+	@BeforeSuite(enabled=true, groups="Sanity" )
 	public void bfrsut(){
 		System.out.println("before suite in homepage");
 	}
 	
-	@BeforeClass
+	@BeforeClass(enabled=true, groups="Sanity" )
 	public void bfrcls(){
 		System.out.println("before class in home page");
 	}
 	
-	@BeforeTest
+	@BeforeTest(enabled=true, groups="Sanity" )
 	public void bfrtst(){
 		System.out.println("before test in home page");
 	}
 	
-	@Test
+	@Test(enabled=true, groups="Sanity" )
 	public void radioBtnTest(){
 		try{
 			hp.getoutsideModal().click();
@@ -59,8 +59,18 @@ public class HomePage {
 			Assert.assertEquals(li.get(i).getText(), "ROUND TRIP");
 		}		
 	}
-
-	@AfterTest()
+	
+	@Test(enabled=true, dependsOnMethods="radioBtnTest")
+	public void dependsOnMethodsTest(){
+		System.out.println("This method will always run after radioBtnTest");
+	}
+	
+	@Test(enabled=true, groups={"Smoke", "Random"})
+	public void excludeGroupTest(){
+		System.out.println("This method will go in exclude tag in testng.xml");
+	}
+	
+	@AfterTest(enabled=true, groups="Sanity" )
 	public void tearDown(){
 		base.tearDown(driver);
 	}	

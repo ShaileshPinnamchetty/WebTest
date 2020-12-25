@@ -25,7 +25,7 @@ public class HomePageSanity {
 	FileInputStream fis;
 	XSSFWorkbook wb;
 	XSSFSheet sh;
-	@BeforeTest(enabled=true)
+	@BeforeTest(enabled=true, groups="Sanity")
 	public void initialize() throws IOException{
 		driver=base.InitBrowser();
 		driver.get(base.prop.getProperty("url"));
@@ -34,7 +34,7 @@ public class HomePageSanity {
 		wb=new XSSFWorkbook(fis);
 	}
 	
-	@Test(enabled=true)
+	@Test(enabled=true, groups="Sanity")
 	public void sanityTest() throws InterruptedException, IOException{	
 		try{
 			hp.getoutsideModal().click();
@@ -77,7 +77,7 @@ public class HomePageSanity {
 	}
 	
 	
-	@AfterTest(enabled=true)
+	@AfterTest(enabled=true, groups="Sanity")
 	public void tearDown(){
 		base.tearDown(driver);
 	}	
