@@ -1,0 +1,48 @@
+[INFO ] 2020-12-27 21:43:12.405 [main] LoginPage - before test in login page
+[INFO ] 2020-12-27 21:43:26.624 [main] LoginPage - Browser initialization is completed
+[INFO ] 2020-12-27 21:43:26.645 [main] LoginPage - before class in login pages
+[INFO ] 2020-12-27 21:43:26.716 [main] LoginPage - before method in loginpage
+[INFO ] 2020-12-27 21:43:38.662 [main] LoginPage - Login popup is not displayed. Clicking on login button!
+[INFO ] 2020-12-27 21:43:41.648 [main] LoginPage - before method in loginpage
+[INFO ] 2020-12-27 21:43:53.145 [main] LoginPage - Login popup is not displayed. Clicking on login button!
+[INFO ] 2020-12-27 21:43:54.932 [main] LoginPage - before method in loginpage
+[INFO ] 2020-12-27 21:44:06.554 [main] LoginPage - Login popup is not displayed. Clicking on login button!
+[INFO ] 2020-12-27 21:44:08.627 [main] LoginPage - Browser closed
+
+doiwmdoijwod
+[INFO ] 2020-12-27 21:44:46.516 [main] LoginPage - before test in login page
+[INFO ] 2020-12-27 21:45:01.732 [main] LoginPage - Browser initialization is completed
+[INFO ] 2020-12-27 21:45:01.739 [main] LoginPage - before class in login pages
+[INFO ] 2020-12-27 21:45:01.756 [main] LoginPage - before method in loginpage
+[INFO ] 2020-12-27 21:45:07.887 [main] LoginPage - before method in loginpage
+[INFO ] 2020-12-27 21:45:18.176 [main] LoginPage - Login popup is not displayed. Clicking on login button!
+[INFO ] 2020-12-27 21:45:20.069 [main] LoginPage - before method in loginpage
+[INFO ] 2020-12-27 21:45:31.512 [main] LoginPage - Login popup is not displayed. Clicking on login button!
+[INFO ] 2020-12-27 21:45:33.521 [main] LoginPage - Browser closed
+[INFO ] 2020-12-27 21:48:08.617 [main] LoginPage - before test in login page
+[INFO ] 2020-12-27 21:48:23.162 [main] LoginPage - Browser initialization is completed
+[INFO ] 2020-12-27 21:48:23.172 [main] LoginPage - before class in login pages
+[INFO ] 2020-12-27 21:48:23.208 [main] LoginPage - before method in loginpage
+[INFO ] 2020-12-27 21:48:35.129 [main] LoginPage - Login popup is not displayed. Clicking on login button!
+[INFO ] 2020-12-27 21:48:37.379 [main] LoginPage - before method in loginpage
+[INFO ] 2020-12-27 21:48:48.916 [main] LoginPage - Login popup is not displayed. Clicking on login button!
+[INFO ] 2020-12-27 21:48:50.877 [main] LoginPage - before method in loginpage
+[INFO ] 2020-12-27 21:49:00.921 [main] LoginPage - Login popup is not displayed. Clicking on login button!
+[INFO ] 2020-12-27 21:49:02.942 [main] LoginPage - Browser closed
+[INFO ] 2020-12-28 01:11:20.542 [main] HomePage - before suite in homepage
+[INFO ] 2020-12-28 01:11:20.581 [main] LoginPage - before test in login page
+[INFO ] 2020-12-28 01:11:44.261 [main] LoginPage - Browser initialization is completed
+[INFO ] 2020-12-28 01:11:44.330 [main] LoginPage - before class in login pages
+[INFO ] 2020-12-28 01:11:44.347 [main] LoginPage - before method in loginpage
+[INFO ] 2020-12-28 01:11:49.486 [main] LoginPage - before method in loginpage
+[INFO ] 2020-12-28 01:11:59.814 [main] LoginPage - Login popup is not displayed. Clicking on login button!
+[INFO ] 2020-12-28 01:12:01.693 [main] LoginPage - before method in loginpage
+[INFO ] 2020-12-28 01:12:12.664 [main] LoginPage - Login popup is not displayed. Clicking on login button!
+[INFO ] 2020-12-28 01:12:15.529 [main] LoginPage - Browser closed
+[INFO ] 2020-12-28 01:12:18.044 [main] HomePage - before test in home page
+[INFO ] 2020-12-28 01:12:40.391 [main] HomePage - Browser initialization is completed
+[INFO ] 2020-12-28 01:12:40.392 [main] HomePage - before class in home page
+[INFO ] 2020-12-28 01:12:41.636 [main] HomePage - Browser closed
+[INFO ] 2020-12-28 01:13:03.116 [main] HomePageSanity - Browser initialization is completed
+[INFO ] 2020-12-28 01:13:13.137 [main] HomePageSanity - Login popup is not displayed. Continuing execution!
+[INFO ] 2020-12-28 01:13:26.971 [main] HomePageSanity - Browser closed

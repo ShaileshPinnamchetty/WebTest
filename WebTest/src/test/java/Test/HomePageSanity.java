@@ -7,6 +7,8 @@ import java.io.InputStream;
 import java.time.LocalDate;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
@@ -25,6 +27,7 @@ public class HomePageSanity {
 	FileInputStream fis;
 	XSSFWorkbook wb;
 	XSSFSheet sh;
+	private static final Logger log = LogManager.getLogger(HomePageSanity.class);
 	@BeforeTest(enabled=true, groups="Sanity")
 	public void initialize() throws IOException{
 		driver=base.InitBrowser();
@@ -32,6 +35,7 @@ public class HomePageSanity {
 		hp=new HomePageObjects(driver);
 		fis=new FileInputStream("C:\\Users\\Dinesh\\workspace\\WebTest\\MultiCityTestData.xlsx");
 		wb=new XSSFWorkbook(fis);
+		log.info("Browser initialization is completed");
 	}
 	
 	@Test(enabled=true, groups="Sanity")
@@ -40,7 +44,8 @@ public class HomePageSanity {
 			hp.getoutsideModal().click();
 		}
 		catch (NoSuchElementException nse){
-			System.out.println("Login popup is not displayed. Continuing execution!");
+			//System.out.println("Login popup is not displayed. Continuing execution!");
+			log.info("Login popup is not displayed. Continuing execution!");
 		}
 		int today = LocalDate.now().getDayOfMonth();
 		XSSFSheet sh=wb.getSheetAt(0);
@@ -80,6 +85,7 @@ public class HomePageSanity {
 	@AfterTest(enabled=true, groups="Sanity")
 	public void tearDown(){
 		base.tearDown(driver);
+		log.info("Browser closed");
 	}	
 
 }
